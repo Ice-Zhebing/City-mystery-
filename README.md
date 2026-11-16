@@ -65,3 +65,22 @@ Geoapify 地图需要项目专用的浏览器 Key。先将根目录的 `maps-con
 ## Geoapify 地图加载排查
 
 地图使用 MapLibre GL JS 和 Geoapify 的 OSM Bright 底图。地图组件或底图加载失败时，页面会显示重试提示。
+
+## Cloudflare 邀请制部署
+
+1. 在 Cloudflare 控制台的 D1 SQL Database 中新建 `city-mystery-db`，将 Database ID 填入根目录 `wrangler.jsonc` 的 `database_id`。线上使用独立的空数据库。
+2. 在仓库根目录的终端登录 Wrangler、执行数据库迁移并部署：
+
+       npx wrangler login
+       npx wrangler d1 migrations apply DB --remote
+       node scripts/build.cjs --cloudflare
+       npx wrangler deploy
+       npx wrangler secret put GEOAPIFY_BROWSER_KEY
+
+   最后一条命令会提示输入 Geoapify 浏览器 Key。Worker 会在运行时提供地图配置，Key 不需要提交到 GitHub。邀请地址确定后，可以在 Geoapify 控制台为 Key 添加站点来源限制。浏览器仍会收到这个地图 Key。
+
+3. 部署配置默认关闭正式 `workers.dev` 地址和预览地址。在 Cloudflare 的 Workers & Pages 中打开 `city-mystery`，设置 **Access → Protect this Worker behind Access → All traffic**。创建 Allow 规则，Include 选择 Emails，填入获准访问的完整邮箱，并启用 One-time PIN 登录。
+4. 确认 Access 策略生效后，在 Worker 的 **Settings → Domains & Routes** 启用 `workers.dev` 地址。启用后把 Wrangler 配置的 `workers_dev` 改为 `true`，让以后部署沿用该设置。`preview_urls` 可以继续关闭。
+5. 用无痕窗口验证受邀邮箱可以进入、名单外邮箱无法访问，再分享正式网址。首次使用网站时需要注册站内账号来保存个人行程和邮戳。
+
+参考：[Cloudflare Access](https://developers.cloudflare.com/workers/configuration/cloudflare-access/) · [D1 配置](https://developers.cloudflare.com/d1/get-started/) · [Geoapify Key 限制](https://myprojects.geoapify.com/help/api-keys/)
