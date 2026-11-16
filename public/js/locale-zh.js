@@ -498,5 +498,6 @@ window.CITY_ZH_STRINGS = {
   "Representative dish: a pub Sunday roast": "菜品参考：英式周日烤肉",
   "A pub Sunday roast": "英式周日烤肉",
   "Steak and chips": "牛排薯条",
-  "Take a detour": "探索更多"
+  "Take a detour": "探索更多",
+  "City Mystery is a personal project by ICE, made for fun and travel inspiration.": "城市盲盒是 ICE 的个人小项目，仅供娱乐和旅行参考。"
 };

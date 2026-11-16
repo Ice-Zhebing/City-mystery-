@@ -69,3 +69,16 @@ dialog{width:min(680px,calc(100% - 32px));max-height:85vh;padding:35px;border:1p
   .card-reveal.has-photo .place-description,
   .food-card .card-reveal.has-photo .place-description { font-size: 11px; }
 }
+.site-footer.project-footer {
+  display: grid;
+  justify-content: stretch;
+  gap: 8px;
+}
+.project-footer .text-button { justify-self: end; }
+.project-footer .project-note {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--muted);
+}
