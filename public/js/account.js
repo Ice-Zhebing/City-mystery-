@@ -10,9 +10,9 @@
   if(!response.ok){if(!loginPage&&[401,409].includes(response.status)&&path!=='/api/register'){clearSession();location.replace('login.html');}throw new Error(result.error||'Please try again.');}return result;
  }
  function accountWindow(){
-  const marker=document.querySelector('.team-mark');if(!marker)return;
-  const button=document.createElement('button');button.type='button';button.className='team-mark account-button';button.setAttribute('aria-label','Open my account');button.innerHTML='<svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></svg><span class="account-button-name"></span>';
-  button.querySelector('.account-button-name').textContent=state.user.username;marker.replaceWith(button);
+  const actions=document.querySelector('.header-actions');if(!actions)return;
+  const button=document.createElement('button');button.type='button';button.className='account-button';button.setAttribute('aria-label','Open my account');button.innerHTML='<svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></svg><span class="account-button-name"></span>';
+  button.querySelector('.account-button-name').textContent=state.user.username;actions.append(button);
   const dialog=document.createElement('dialog');dialog.className='account-dialog';dialog.setAttribute('aria-labelledby','account-title');
   dialog.innerHTML='<button class="dialog-close" type="button" aria-label="Close account">×</button><p class="eyebrow">YOUR LITTLE CORNER</p><h2 id="account-title">My account</h2><dl class="account-details"><dt>Username</dt><dd id="account-name"></dd><dt>Password</dt><dd id="account-password"></dd></dl><p class="account-error" role="status"></p><button type="button" class="button button-primary logout-button">Log out <span aria-hidden="true">↗</span></button>';
   document.body.append(dialog);

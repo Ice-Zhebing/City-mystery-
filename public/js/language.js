@@ -104,19 +104,14 @@
   }
 
   function installMenu() {
-    const header = document.querySelector('.header-inner');
-    if (!header) return;
-    const account = header.querySelector(':scope > .team-mark');
-    const actions = document.createElement('div');
-    actions.className = 'header-actions';
-    header.append(actions);
+    const actions = document.querySelector('.header-actions');
+    if (!actions) return;
     const menu = document.createElement('details');
     menu.className = 'language-menu';
     menu.innerHTML = '<summary>Language <span aria-hidden="true">⌄</span></summary>'
       + '<div class="language-options"><button type="button" lang="zh-CN" data-language="zh-CN">简体中文</button>'
       + '<button type="button" lang="en" data-language="en">English</button></div>';
-    actions.append(menu);
-    if (account) actions.append(account);
+    actions.prepend(menu);
     menu.querySelectorAll('[data-language]').forEach(button => {
       const selected = button.dataset.language === (chinese ? 'zh-CN' : 'en');
       button.setAttribute('aria-pressed', String(selected));

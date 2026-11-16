@@ -497,7 +497,6 @@ window.CITY_ZH_STRINGS = {
   "Italian risotto": "意大利烩饭",
   "Representative dish: a pub Sunday roast": "菜品参考：英式周日烤肉",
   "A pub Sunday roast": "英式周日烤肉",
-  "City Mystery · UCL · 200 ok": "City Mystery · UCL · 200 ok",
   "Steak and chips": "牛排薯条",
   "Take a detour": "探索更多"
 };

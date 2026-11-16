@@ -5,7 +5,7 @@
   .brand{gap:11px}.brand-compass{width:42px;height:42px}
   .brand-name{font-size:29px}
   .site-nav{gap:30px;margin-right:45px}.site-nav a{font-size:16px;padding:9px 0}
-  .team-mark{font-size:15px}
+
   .hero,.trip-hero{padding-block:22px;gap:36px;grid-template-columns:1fr 1.1fr}
   .hero h1,.trip-hero h1{font-size:clamp(40px,3.8vw,53px);letter-spacing:-2px;line-height:1.05;margin:12px 0 14px}
   .hero-description,.trip-hero .hero-description{font-size:14px;line-height:1.65;max-width:410px}
