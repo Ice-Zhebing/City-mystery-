@@ -1,8 +1,5 @@
 # City Mystery
 
-只使用 HTML、CSS、原生 JavaScript 和 SQL，无 React、Vue、Express 或其他框架。
-.cjs 是 Node.js 使用的 CommonJS JavaScript 文件扩展名，仍然是 JavaScript，不是另一种语言。
-
 ## 启动网站
 
 在此文件夹的终端运行：
