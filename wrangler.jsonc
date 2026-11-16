@@ -3,7 +3,7 @@
   "name": "city-mystery",
   "main": "dist/cloudflare/index.mjs",
   "compatibility_date": "2026-11-16",
-  "workers_dev": false,
+  "workers_dev": true,
   "preview_urls": false,
   "assets": {
     "directory": "./public",
@@ -16,7 +16,7 @@
     {
       "binding": "DB",
       "database_name": "city-mystery-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "a11c366e-0a0d-4451-9a80-988e0b9fcf31",
       "migrations_dir": "database/migrations"
     }
   ]
