@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="auth-pending">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f32">
+  <meta name="description" content="The city, sights and food you revealed, brought together into your own UK day adventure.">
+  <title>My Trip — City Mystery</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.17.0/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/my-trip.css">
+  <link rel="stylesheet" href="css/compact.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="css/language.css"><script src="js/locale-zh.js" defer></script><script src="js/language.js" defer></script><script src="js/account.js" defer></script>
+  <script src="assets/image-credits.js" defer></script><script src="assets/food-image-credits.js" defer></script><script src="js/data.js" defer></script>
+  <script src="js/city-media.js" defer></script><script src="js/food-media.js" defer></script><script src="js/trip-engine.js" defer></script>
+  <script src="js/trip-page-model.js" defer></script><script src="js/maps-config.js" defer></script>
+  <script src="js/trip-map.js" defer></script><script src="js/my-trip.js" defer></script>
+</head>
+<body class="trip-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="City Mystery home"><svg class="brand-compass" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="23"/><circle cx="32" cy="32" r="3"/><path d="M32 1v17m0 28v17M1 32h17m28 0h17M12 12l13 13m14 14 13 13M12 52l13-13m14-14 13-13M32 10l6 16 16 6-16 6-6 16-6-16-16-6 16-6Z"/><path class="compass-fill" d="m32 10 6 16-6 6Z m22 22-16 6-6-6Z m-22 22-6-16 6-6Z M10 32l16-6 6 6Z"/></svg><span><span class="brand-name"><span lang="en">City Mystery</span><span class="brand-separator" aria-hidden="true"> · </span><span class="brand-local" lang="zh-CN">城市盲盒</span></span></span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="my-trip.html" aria-current="page">My Trip</a><a href="passport.html">Travel Passport</a></nav>
+    <div class="team-mark"><span>UCL</span><span>200 ok</span></div>
+  </div></header>
+  <main id="main">
+    <section id="empty-trip" class="empty-trip content-width" hidden aria-labelledby="empty-title">
+      <span class="empty-compass" aria-hidden="true">✥</span><p class="eyebrow">A little mystery comes first</p>
+      <h1 id="empty-title">Your day is waiting<br>to be discovered.</h1>
+      <p>Reveal a city and your sight and food cards on Home, then choose “Build my trip”. Your own discoveries will appear here.</p>
+      <a href="index.html" class="button button-primary">Discover my day <span aria-hidden="true">↗</span></a>
+    </section>
+    <div id="trip-content" hidden>
+      <div class="trip-back-bar content-width">
+        <a href="index.html" class="edit-discoveries">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          Back to my discoveries
+        </a>
+      </div>
+      <section class="hero trip-hero content-width" aria-labelledby="trip-title">
+        <div class="hero-copy"><p class="eyebrow" id="trip-city-label"></p><h1 id="trip-title"></h1><p class="hero-description" id="trip-city-intro"></p></div>
+        <div class="slideshow trip-slideshow" role="region" aria-roledescription="carousel" aria-label="Your city's landscapes"><div class="slides" id="trip-slides"></div><div class="carousel-controls"><button type="button" class="carousel-arrow" id="trip-previous-slide" aria-label="Previous city landscape">←</button><div class="carousel-dots" id="trip-slide-dots" role="group" aria-label="Choose a city landscape"></div><button type="button" class="carousel-arrow" id="trip-next-slide" aria-label="Next city landscape">→</button><button type="button" class="carousel-pause" id="trip-pause-slides" aria-label="Pause city slideshow" aria-pressed="false">Ⅱ</button></div></div>
+      </section>
+      <div class="trip-summary content-width" aria-label="Your travel style and sight count">
+        <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 19 4-14 6 5 5-7 3 16ZM3 19h18"/></svg><span id="trip-mode"></span></div>
+        <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M2 14 5 5h3l2 9m4 0 2-9h3l3 9m-12-3h4"/></svg><span id="trip-sight-count"></span></div>
+      </div>
+      <section class="trip-workspace content-width" aria-label="Your itinerary, food finds and map">
+        <div class="trip-lists">
+          <div class="section-heading trip-section-heading"><span class="section-compass" aria-hidden="true">✥</span><h2>Your day, in order.</h2></div>
+          <div class="trip-list-columns">
+            <section class="sight-itinerary" aria-labelledby="sight-itinerary-title"><div class="trip-column-heading"><h3 id="sight-itinerary-title">Sights to see</h3></div><ol id="trip-sights" class="itinerary-list" role="list"></ol></section>
+            <section class="food-itinerary" aria-labelledby="food-itinerary-title"><div class="trip-column-heading"><h3 id="food-itinerary-title">A taste of the city</h3></div><ul id="trip-food" class="food-finds" role="list"></ul></section>
+          </div>
+          
+        </div>
+        <section class="trip-map-panel" aria-labelledby="map-heading">
+          <div class="map-panel-heading"><div><h2 id="map-heading">Your sights, on the map.</h2></div></div>
+          <div class="map-frame" id="map-frame"><div id="trip-map" aria-label="Map of your selected sights"></div><div class="map-loading" id="map-loading" role="status"><strong>Loading map…</strong></div><div class="map-failure" id="map-failure" hidden><span aria-hidden="true">↗</span><strong>Map unavailable</strong><p id="map-failure-text">Check your connection and try again.</p><button type="button" class="button map-retry" id="retry-map">Try again</button></div></div>
+          <div class="route-information"><div class="route-status"><span class="route-status-dot" id="route-status-dot"></span><span id="route-status" role="status" aria-live="polite">Preparing your city map</span></div><div id="route-totals" hidden><strong id="route-distance"></strong><span>·</span><strong id="route-duration"></strong><span>walking</span></div></div>
+          <p class="route-explanation" id="route-explanation" hidden></p><p id="route-warnings" class="route-warnings" hidden></p>
+          <div class="complete-trip-box"><button id="complete-trip" class="button button-primary" type="button">Complete trip <span aria-hidden="true">↗</span></button><p class="complete-status" id="complete-status" role="status"></p><a href="passport.html" id="view-passport" hidden>View my passport →</a></div>
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer content-width"><button type="button" class="text-button" id="trip-open-credits">Credits</button></footer>
+  <dialog id="trip-credits-dialog" aria-labelledby="trip-credits-title"><button class="dialog-close" id="trip-close-credits" type="button" aria-label="Close credits">×</button><p class="eyebrow">A little credit where it’s due</p><h2 id="trip-credits-title">Behind your discoveries</h2><p>The places are the ones you revealed on Home. Check official sites for opening hours, admission and reservations. Travel times, when available, come from Geoapify and exclude visits and food stops.</p><h3>Photography</h3><div id="trip-photo-credits"></div><h3>Your place sources</h3><div id="trip-place-credits"></div></dialog>
+  <div class="sr-only" id="trip-announcement" role="status" aria-live="polite"></div>
+  <noscript><p class="content-width">Please enable JavaScript to load the trip you built on Home.</p></noscript>
+</body>
+</html>

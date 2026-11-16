@@ -1,0 +1,102 @@
+/* Shared, compact proportions. Mobile keeps comfortable reading and tap sizes. */
+@media (min-width: 901px) {
+  .content-width,.header-inner{width:min(1200px,calc(100% - 64px))}
+  .header-inner{min-height:74px;gap:24px}
+  .brand{gap:11px}.brand-compass{width:42px;height:42px}
+  .brand-name{font-size:29px}
+  .site-nav{gap:30px;margin-right:45px}.site-nav a{font-size:16px;padding:9px 0}
+  .team-mark{font-size:15px}
+  .hero,.trip-hero{padding-block:22px;gap:36px;grid-template-columns:1fr 1.1fr}
+  .hero h1,.trip-hero h1{font-size:clamp(40px,3.8vw,53px);letter-spacing:-2px;line-height:1.05;margin:12px 0 14px}
+  .hero-description,.trip-hero .hero-description{font-size:14px;line-height:1.65;max-width:410px}
+  .eyebrow{font-size:9px;letter-spacing:2px}.hero-note{font-size:10px;margin-top:14px}
+  .slideshow{padding:5px 5px 27px;border-radius:7px}
+  .slides,.trip-slideshow .slides{aspect-ratio:2.5;max-height:220px}
+  .carousel-controls{height:27px}.slide figcaption{font-size:8px;bottom:10px;left:12px}
+  .how-it-works{padding-block:15px;margin-block:0}
+  .how-it-works li{gap:12px;padding-inline:20px}
+  .step-number{width:31px;height:31px;font-size:16px}
+  .how-it-works svg{width:23px;height:25px}
+  .how-it-works h2{font-size:17px}.how-it-works p{font-size:11px}
+  .pace-section{padding-block:20px 23px}
+  .section-heading h2,.trip-section-heading h2{font-size:28px}
+  .section-compass{font-size:30px}.section-heading{gap:8px}
+  .mode-options{margin-top:13px;gap:13px}
+  .mode-option{padding:14px 18px;gap:13px;border-radius:5px}
+  .mode-icon,.mode-icon svg{width:28px;height:28px}
+  .mode-text strong{font-size:22px}.mode-text>span{font-size:11px}
+  .mode-count{font-size:10px;padding:4px 7px}.radio-mark{width:19px;height:19px;font-size:11px}
+  .adventure-section{padding-top:21px}.adventure-heading{margin-bottom:18px}
+  .section-intro{font-size:11px;margin-top:6px;margin-left:38px}
+  .trip-recipe{font-size:10px;padding:6px 10px}
+  .card-board{gap:20px;grid-template-columns:minmax(240px,.95fr) minmax(0,2.35fr)}
+  .row-heading{margin-bottom:9px;min-height:23px}.row-heading h3{font-size:18px}
+  .food-row-heading{margin-top:18px}.small-card-grid{gap:11px}
+  .flip-card:not(.city-card){height:330px}.city-card{height:710px}
+  .card-reveal.has-photo{padding:12px}.discovery-photo{height:100px}
+  .card-reveal.has-photo>.card-label{top:18px;left:18px}
+  .card-reveal.has-photo .place-title-row{margin-top:11px}
+  .card-reveal h4,.food-card .card-reveal.has-photo .food-title{font-size:18px}
+  .city-card .city-info h4{font-size:34px}.city-info{padding:18px 16px 12px}
+  .city-card .card-mystery h4{font-size:29px}.city-mystery-art{width:185px;margin-bottom:12px}
+  .city-tagline{font-size:14px;margin-top:9px}.city-description{font-size:11px;margin-top:8px}
+  .city-card .reveal-prompt{padding:10px 19px}.card-mystery{padding:15px}
+  .card-mystery h4{font-size:17px}.mystery-icon{width:36px;height:36px}
+  .trip-bottom-bar{padding-top:17px;margin-top:22px;gap:22px}
+  .button{padding:10px 21px;font-size:12px;gap:28px}
+  .site-footer{padding-block:14px 20px;margin-top:18px}
+  .edit-discoveries{margin-top:15px}
+  .trip-summary{padding-block:12px;margin-bottom:21px}
+  .trip-summary>div{font-size:17px;gap:14px}.trip-summary svg{width:23px;height:23px}
+  .trip-section-heading{margin-bottom:16px}
+  .trip-page .trip-list-columns{gap:22px 14px}
+  .sight-itinerary,.food-itinerary{row-gap:22px}
+  .trip-page .trip-column-heading h3{font-size:20px}
+  .trip-page .trip-sight-card,.trip-page .food-find{padding:10px}
+  .trip-page .trip-place-visual{height:88px;margin-bottom:10px}
+  .trip-page .trip-place-title,.trip-page .food-find .trip-place-title{font-size:18px}
+  .trip-page .trip-place-description,.trip-page .food-find .trip-place-description{margin-top:7px;line-height:1.55}
+  .trip-page .trip-place-address,.trip-page .food-find .trip-place-address{margin-top:8px;line-height:1.5}
+  .trip-page .trip-sight:not(:last-child):after{bottom:-22px;height:22px}
+  .trip-page .trip-leg{bottom:-18px}
+  .trip-map-panel{padding:12px 10px;top:16px}
+  .map-panel-heading{padding-bottom:11px}.map-panel-heading h2{font-size:22px}
+  .trip-page .map-frame{height:clamp(380px,55vh,540px)}
+  .route-information{padding-top:10px;font-size:10px}.route-explanation{font-size:9px;margin-top:7px}
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  .site-nav{margin-right:0;gap:24px}.card-board{gap:16px}
+  .card-reveal h4,.food-card .card-reveal.has-photo .food-title{font-size:17px}
+}
+@media (max-width: 900px) {
+  .hero h1,.trip-hero h1{font-size:44px}
+  .hero,.trip-hero{padding-block:23px}
+  .slides,.trip-slideshow .slides{aspect-ratio:2.15;max-height:240px}
+  .trip-page .map-frame{height:390px}
+}
+
+/* More room for photographs; fewer captions and no architectural crops. */
+.slides,.trip-slideshow .slides{aspect-ratio:1.8;max-height:300px;background:#eeeee5}
+.slide img{object-fit:contain;object-position:center!important}
+.hero h1,.trip-hero h1{font-size:clamp(38px,3.7vw,50px)}
+.discovery-photo{height:160px;background:#f0f0e9}
+.discovery-photo img,.trip-place-visual img{object-fit:contain;object-position:center}
+.city-photo{height:66%;background:#f0f0e9}.city-photo img{object-fit:contain;object-position:center}
+.city-tagline{display:none}.city-info{padding:16px}.city-card .city-info h4{font-size:32px}
+.flip-card:not(.city-card){height:330px}.city-card{height:710px}
+.card-reveal.has-photo .place-address{font-size:10px;margin-top:10px}
+.card-reveal.has-photo .place-title-row{margin-top:12px}
+.card-reveal.has-photo .place-description{display:none}
+.trip-page .trip-place-visual{height:175px;background:#f0f0e9}
+.trip-page .trip-column-heading>p{min-height:0}.trip-page .trip-list-columns{row-gap:22px}
+.trip-page .trip-place-address{font-size:10px}.trip-page .trip-card-links,.trip-page .food-find-footer{min-height:32px}
+.trip-page .food-find-nearby{font-size:9px}
+.complete-trip-box{padding-top:13px;margin-top:13px}
+.route-information:has(#route-status:empty){display:none}
+@media(min-width:901px){.hero,.trip-hero{padding-block:22px}.trip-hero h1{margin-bottom:0}.trip-page .map-frame{height:clamp(380px,55vh,540px)}}
+@media(max-width:900px){.city-card{height:430px}.city-card .city-photo{height:100%}.discovery-photo{height:150px}.flip-card:not(.city-card){height:330px}.trip-page .trip-place-visual{height:190px}}
+@media(max-width:600px){.small-card-grid{grid-template-columns:1fr}.small-card-grid .flip-card:last-child{grid-column:auto;height:330px}.flip-card:not(.city-card){height:330px}.discovery-photo{height:175px}.city-card{height:360px}.slides,.trip-slideshow .slides{aspect-ratio:1.65;max-height:250px}.trip-page .trip-place-visual{height:200px}}
+
+.trip-page .trip-place-visual{display:block}.trip-place-visual img{display:block;width:100%;height:100%;min-width:0;min-height:0}
+
+.build-action{margin-left:auto}.site-footer{justify-content:flex-end;border-top:0;padding-block:8px 14px;margin-top:8px}.build-action>span:empty{display:none}

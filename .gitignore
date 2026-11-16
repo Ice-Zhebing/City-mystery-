@@ -1,0 +1,9 @@
+outputs/
+.preview/
+dist/
+drizzle/
+database/*.sqlite*
+*.log
+.DS_Store
+Thumbs.db
+/public/js/maps-config.js

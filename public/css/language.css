@@ -1,0 +1,76 @@
+.header-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.header-actions .account-button {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+}
+.header-actions .account-button svg { flex: none; }
+.header-actions .account-button:hover {
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.brand-local { font-size: .62em; font-family: var(--sans); letter-spacing: 0; white-space: nowrap; }
+.language-menu { position: relative; font: 600 12px/1.3 var(--sans); color: var(--green); }
+.language-menu summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  list-style: none;
+}
+.language-menu summary::-webkit-details-marker { display: none; }
+.language-menu summary:hover { text-decoration: underline; text-underline-offset: 3px; }
+.language-options {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 120px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper-light);
+  box-shadow: 0 6px 16px #20342520;
+}
+.language-options button {
+  display: block;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--green);
+  font: inherit;
+  text-align: left;
+}
+.language-options button:hover,
+.language-options button[aria-pressed="true"] { background: #e9edde; }
+html[lang="zh-CN"] .passport-page-heading,
+html[lang="zh-CN"] .eyebrow { letter-spacing: .1em; }
+@media (max-width: 900px) {
+  .brand-local { display: block; margin-top: 4px; }
+  .brand-separator { display: none; }
+}
+@media (max-width: 700px) {
+  .header-inner { gap: 8px; }
+  .header-actions { gap: 6px; }
+  .language-menu summary { padding-inline: 7px; }
+  .header-actions .account-button { min-width: 48px; }
+  .header-actions .account-button-name { max-width: 55px; }
+  .brand-name { font-size: clamp(20px, 5vw, 28px); white-space: nowrap; }
+}
